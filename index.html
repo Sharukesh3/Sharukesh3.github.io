@@ -520,7 +520,11 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(45deg, rgba(232, 168, 73, 0.08), transparent);
+        background: linear-gradient(
+          45deg,
+          rgba(232, 168, 73, 0.08),
+          transparent
+        );
         opacity: 0;
         transition: opacity 0.3s ease;
       }
@@ -1262,7 +1266,11 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, rgba(232, 168, 73, 0.08), transparent);
+        background: linear-gradient(
+          135deg,
+          rgba(232, 168, 73, 0.08),
+          transparent
+        );
         opacity: 0;
         transition: opacity 0.3s ease;
         pointer-events: none;
@@ -1411,13 +1419,15 @@
       }
 
       @keyframes dots {
-        0%, 20% {
+        0%,
+        20% {
           content: ".";
         }
         40% {
           content: "..";
         }
-        60%, 100% {
+        60%,
+        100% {
           content: "...";
         }
       }
@@ -1633,7 +1643,14 @@
             <h4 class="timeline-company">Telesto Energy</h4>
             <p class="timeline-date">December 2025 – March 2026</p>
             <p class="timeline-description">
-              Leveraged the open-source RAG-Anything framework to build a scalable knowledge system using AWS Bedrock for LLM orchestration, integrating Redis and FAISS for high-speed vector search and Neo4j for graph-based multi-hop retrieval. Additionally developed an OpenCV-based document restoration pipeline to enhance degraded archival records by removing brown artifacts, normalizing backgrounds, and sharpening text, significantly improving OCR accuracy.
+              Leveraged the open-source RAG-Anything framework to build a
+              scalable knowledge system using AWS Bedrock for LLM orchestration,
+              integrating Redis and FAISS for high-speed vector search and Neo4j
+              for graph-based multi-hop retrieval. Additionally developed an
+              OpenCV-based document restoration pipeline to enhance degraded
+              archival records by removing brown artifacts, normalizing
+              backgrounds, and sharpening text, significantly improving OCR
+              accuracy.
             </p>
           </div>
         </div>
@@ -1644,7 +1661,11 @@
             <h4 class="timeline-company">Discovery AI LLC</h4>
             <p class="timeline-date">September 2025 – November 2025</p>
             <p class="timeline-description">
-              Developed a web-based AR tool using FastAPI and OpenCV for the AR Rug Visualizer. Implemented floor plane estimation and projective geometry to map 2D product images onto user-uploaded room photos with correct 3D perspective. Integrated Pyodide for browser-based Python execution, enabling seamless client-side AI processing.
+              Developed a web-based AR tool using FastAPI and OpenCV for the AR
+              Rug Visualizer. Implemented floor plane estimation and projective
+              geometry to map 2D product images onto user-uploaded room photos
+              with correct 3D perspective. Integrated Pyodide for browser-based
+              Python execution, enabling seamless client-side AI processing.
             </p>
           </div>
         </div>
@@ -1655,7 +1676,12 @@
             <h4 class="timeline-company">InceptAI</h4>
             <p class="timeline-date">March 2025 – April 2025</p>
             <p class="timeline-description">
-              Designed and developed plugins for Microsoft Security Copilot to enhance security workflows. Built RAG pipelines using DeepSeek R1 for context-aware KQL generation. Implemented agentic workflows for dynamic prompt rewriting and adaptive KQL construction. Collaborated with engineers to deploy plugins using CI/CD pipelines, improving SOC efficiency.
+              Designed and developed plugins for Microsoft Security Copilot to
+              enhance security workflows. Built RAG pipelines using DeepSeek R1
+              for context-aware KQL generation. Implemented agentic workflows
+              for dynamic prompt rewriting and adaptive KQL construction.
+              Collaborated with engineers to deploy plugins using CI/CD
+              pipelines, improving SOC efficiency.
             </p>
           </div>
         </div>
@@ -2002,7 +2028,7 @@
 
         // Apple-like scroll animations
         const scrollElements = document.querySelectorAll(
-          ".section-title, .project-card, .skill-card, .research-card"
+          ".section-title, .project-card, .skill-card, .research-card",
         );
 
         scrollElements.forEach((el) => {
@@ -2020,7 +2046,7 @@
           {
             threshold: 0.1,
             rootMargin: "0px 0px -100px 0px",
-          }
+          },
         );
 
         scrollElements.forEach((el) => {
@@ -2029,7 +2055,7 @@
 
         // Staggered animations for child elements
         const staggerContainers = document.querySelectorAll(
-          ".projects-grid, .research-grid"
+          ".projects-grid, .research-grid",
         );
 
         staggerContainers.forEach((container) => {
@@ -2046,7 +2072,7 @@
                   }
                 });
               },
-              { threshold: 0.1 }
+              { threshold: 0.1 },
             );
             observer.observe(item);
           });
@@ -2182,40 +2208,43 @@
       // Load and display research papers
       async function loadResearchPapers() {
         const researchGrid = document.getElementById("researchGrid");
-        
+
         try {
-          const response = await fetch("https://github.com/Sharukesh3/Sharukesh3.github.io/raw/main/papers.json");
+          const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/Sharukesh3/Sharukesh3.github.io@main/papers.json",
+          );
           if (!response.ok) {
             throw new Error(`Failed to load papers: ${response.status}`);
           }
-          
+
           const papers = await response.json();
-          
+
           // Clear loading message
           researchGrid.innerHTML = "";
-          
+
           // Create paper cards
           papers.forEach((paper, index) => {
             const card = document.createElement("div");
             card.className = "research-card scroll-reveal";
             card.style.animationDelay = `${index * 0.1}s`;
-            
-            const statusClass = paper.status === "Published" ? "published" : "underway";
-            
+
+            const statusClass =
+              paper.status === "Published" ? "published" : "underway";
+
             const tagsHTML = paper.keywords
-              .map(tag => `<span class="research-tag">${tag}</span>`)
+              .map((tag) => `<span class="research-tag">${tag}</span>`)
               .join("");
-            
+
             const linksHTML = paper.links
-              .map(link => {
+              .map((link) => {
                 const isDisabled = !link.url ? "disabled" : "";
-                return `<a href="${link.url || '#'}" ${!link.url ? 'disabled' : 'target="_blank"'} class="research-link ${isDisabled}">
-                  <i class="fas fa-${link.icon || 'link'}"></i>
+                return `<a href="${link.url || "#"}" ${!link.url ? "disabled" : 'target="_blank"'} class="research-link ${isDisabled}">
+                  <i class="fas fa-${link.icon || "link"}"></i>
                   ${link.label}
                 </a>`;
               })
               .join("");
-            
+
             card.innerHTML = `
               <div class="research-header">
                 <h3 class="research-title">${paper.title}</h3>
@@ -2230,10 +2259,10 @@
               <div class="research-tags">${tagsHTML}</div>
               <div class="research-links">${linksHTML}</div>
             `;
-            
+
             researchGrid.appendChild(card);
           });
-          
+
           // Trigger scroll animations for new cards
           initScrollAnimations();
         } catch (error) {
@@ -2246,7 +2275,7 @@
           `;
         }
       }
-      
+
       // Load research papers when page loads
       window.addEventListener("load", function () {
         loadResearchPapers();
