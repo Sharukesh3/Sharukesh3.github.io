@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Design and Implementation of an Autonomous Self-Controlled Delivery Robot with an OTP-Based Secure Delivery",
+    "venue": "IEEE",
+    "year": 2026,
+    "status": "Published",
+    "authors": "Sharukesh Mahendran",
+    "description": "This paper presents the design and implementation of a self-controlled delivery robot designed for autonomous navigation and secure last-mile delivery. The system utilizes GPS-based positioning along with an A* path planning algorithm to determine an optimal path to the target location. Computer vision methods alongside a forward-facing HD camera provide lane keeping and real-time obstacle detection by employing a YOLOv8 model. Hazards on the road initiate a local bypass procedure to realign its trajectory dynamically. During delivery, the system requests a one-time password (OTP) from the receiver, which will activate an onboard lock mechanism for the release of the parcel.",
+    "keywords": ["Delivery Robot", "Autonomous Navigation", "Path Planning", "Obstacle Avoidance", "Computer Vision", "YOLOv8"],
+    "links": [
+      {
+        "label": "View on IEEE Xplore",
+        "url": "https://ieeexplore.ieee.org/document/11409157",
+        "icon": "linkedin"
+      }
+    ]
+  },
+  {
+    "title": "Analysis of Deep and Graph Neural Networks for Enhanced DDoS Attack Detection: A Pathway to Hybrid Models",
+    "venue": "IEEE",
+    "year": 2026,
+    "status": "Published",
+    "authors": "Sharukesh Mahendran",
+    "description": "Distributed denial-of-service (DDoS) attacks pose significant threats to network security, targeting critical infrastructures with increasing complexity. This paper presents a comparative analysis of deep neural networks (DNNs) and graph neural networks (GNNs) within an SDN framework to detect DDoS attacks. Using real-time network monitoring and traffic anomaly identification, the models are evaluated using metrics such as accuracy, precision, recall, and F1-score against both known and novel attack patterns. Our findings underscore the superiority of GNNs in capturing complex and interconnected relationships within network traffic, offering enhanced detection capabilities.",
+    "keywords": ["DDoS Attack Detection", "Graph Neural Networks", "Deep Neural Networks", "SDN", "Cybersecurity", "Machine Learning"],
+    "links": [
+      {
+        "label": "View on IEEE Xplore",
+        "url": "https://ieeexplore.ieee.org/document/11361499",
+        "icon": "linkedin"
+      }
+    ]
+  },
+  {
+    "title": "An Intelligent Plug-In Playable Orchestration Model that Combines Gen-AI Prompting, RAG and Agentic AI for Efficient Cybersecurity Operations",
+    "venue": "Springer Nature",
+    "year": 2026,
+    "status": "Published",
+    "authors": "Sharukesh Mahendran",
+    "description": "Artificial Intelligence Technologies such as Generative AI prompting, Retrieval Augmented Generation (RAG) and Agentic AI have started to emerge in cybersecurity operations and use-cases independently. We propose an intelligent orchestration mechanism that sifts the requirements of contextual injection, smart autonomy, integrated use case and intent capture. It is capable of reducing hallucinations and capable of enhancing semantic reasoning using prompting, RAG and Agentic AI, smartly, simultaneously and on demand. The plug-in is scalable for the Model context protocol (MCP) and Agent to Agent (A2A) ecosystems.",
+    "keywords": ["Generative AI", "RAG", "Agentic AI", "Cybersecurity", "SIEM", "SOAR", "MCP"],
+    "links": [
+      {
+        "label": "View on springer",
+        "url": "https://link.springer.com/chapter/10.1007/978-981-95-1361-1_45",
+        "icon": "linkedin"
+      }
+    ]
+  }
+]
